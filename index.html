@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for my pretty pretty patoolooootie</title>
+</head>
+<body>
+    <h2>What is the secret password????</h2>
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="message"></p>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = 'p4tootie'; // Set your password here
+            const message = 'Wow you figured it out!!! I love youuu'; // Set your message here
+
+            if (password === correctPassword) {
+                document.getElementById('message').textContent = message;
+            } else {
+                document.getElementById('message').textContent = 'HA, that is WRONG :( TRY AGAIN.';
+                document.getElementById('password').value = ''; // Clear the input field
+            }
+        }
+    </script>
+</body>
+</html>
